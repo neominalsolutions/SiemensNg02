@@ -11,4 +11,20 @@ export class TodoItemComponent {
   @Input() todo: Todo | undefined;
   // kısa yazım şekli
   @Input() todo1!: Todo;
+
+  editMode: boolean = false;
+
+  Delete(arg0: number | undefined) {}
+
+  Edit(arg0: number | undefined) {
+    this.editMode = true;
+  }
+
+  Confirm() {
+    this.editMode = false;
+  }
+
+  // onTitleChange($event: any) {
+  //   if (this.todo) this.todo.title = $event.target.value;
+  // }
 }
