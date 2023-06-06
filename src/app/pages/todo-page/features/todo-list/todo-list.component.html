@@ -1,6 +1,7 @@
 <ul>
-  <li *ngFor="let item of items">
+  <!-- <li *ngFor="let item of items">
     {{item.title}}
     <span>{{item.completed ? 'tamamlandı':'tamamlanmadı'}}</span>
-  </li>
+  </li> -->
+  <app-todo-item *ngFor="let item of items" [todo]="item"></app-todo-item>
 </ul>
