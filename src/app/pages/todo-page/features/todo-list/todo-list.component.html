@@ -1,7 +1,7 @@
-<ul>
+<div>
   <!-- <li *ngFor="let item of items">
     {{item.title}}
     <span>{{item.completed ? 'tamamlandı':'tamamlanmadı'}}</span>
   </li> -->
   <app-todo-item *ngFor="let item of items" [todo]="item"></app-todo-item>
-</ul>
+</div>
