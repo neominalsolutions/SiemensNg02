@@ -2,12 +2,14 @@
   display:'flex', 
   flexDirection:'row', 
   justifyContent:'center', padding:'5px'}">
-  <app-todo-create (addClick)="onItemAdd($event)"></app-todo-create>
+  <app-todo-create #todoCreate (addClick)="onItemAdd($event)"></app-todo-create>
 </div>
 
 <div>
   <app-todo-list [items]="todos"></app-todo-list>
 </div>
+
+<button (click)="ngDoCheckTest()">ngDoCheckTest</button>
 
 <!-- 
 {{todos | json}} -->

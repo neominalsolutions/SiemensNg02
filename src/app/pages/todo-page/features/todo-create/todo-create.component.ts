@@ -9,6 +9,7 @@ import { Todo } from '../../models/todo';
 export class TodoCreateComponent {
   @Output() addClick = new EventEmitter<Todo>();
   // child component kendi içindeki değişimi event fırlatarak root componente bildirir.
+  
 
   todo: Todo = {
     id: -1,
