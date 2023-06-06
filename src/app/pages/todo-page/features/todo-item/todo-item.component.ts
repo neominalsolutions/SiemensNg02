@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Todo } from '../../models/todo';
 
 @Component({
@@ -11,12 +11,15 @@ export class TodoItemComponent {
   @Input() todo: Todo | undefined;
   // kısa yazım şekli
   @Input() todo1!: Todo;
+  @Output() ItemDeleted = new EventEmitter<Todo>();
 
   editMode: boolean = false;
 
-  Delete(arg0: number | undefined) {}
+  Delete() {
+    this.ItemDeleted.emit(this.todo);
+  }
 
-  Edit(arg0: number | undefined) {
+  Edit() {
     this.editMode = true;
   }
 

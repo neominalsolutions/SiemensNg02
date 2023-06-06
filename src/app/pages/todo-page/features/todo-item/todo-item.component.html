@@ -1,7 +1,6 @@
 <div [ngClass]="todo?.completed ? 'completed':'not-completed'">
   <!-- <div *ngIf="editMode && todo">
     <input [(ngModel)]="todo.title">
-    <input [value]="todo.title" (change)="onTitleChange($event)"> 
     <input type="checkbox" [(ngModel)]="todo.completed"> İşlem Tamamlandı Mı ?
     <button (click)="Confirm()">Onay</button>
   </div>
@@ -9,13 +8,19 @@
     {{todo?.title}}
     <span>{{todo?.completed ?
       'tamamlandı':'tamamlanmadı'}}</span>
-    <button (click)="Edit(todo?.id)">Düzenle</button>
-    <button (click)="Delete(todo?.id)">Sil</button>
+    <button (click)="Edit()">Düzenle</button>
+    <button (click)="Delete()">Sil</button>
   </div> -->
 
   <!-- 2.yöntem -->
   <div *ngIf="editMode then editModeTemplate else normalModeTemplate"></div>
 </div>
+
+<ng-template>
+  Deneme Ng Template
+</ng-template>
+
+Mode {{editMode}}
 
 <ng-template #editModeTemplate>
   <div *ngIf="editMode && todo">
@@ -30,6 +35,6 @@
   {{todo?.title}}
   <span>{{todo?.completed ?
     'tamamlandı':'tamamlanmadı'}}</span>
-  <button (click)="Edit(todo?.id)">Düzenle</button>
-  <button (click)="Delete(todo?.id)">Sil</button>
+  <button (click)="Edit()">Düzenle</button>
+  <button (click)="Delete()">Sil</button>
 </ng-template>
