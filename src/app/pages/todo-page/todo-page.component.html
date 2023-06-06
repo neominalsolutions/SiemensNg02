@@ -3,9 +3,11 @@
   flexDirection:'row', 
   justifyContent:'center', padding:'5px'}">
   <app-todo-create (addClick)="onItemAdd($event)"></app-todo-create>
+</div>
 
-  <app-todo-list></app-todo-list>
+<div>
+  <app-todo-list [items]="todos"></app-todo-list>
 </div>
 
 
-{{todos | json}}
+<!-- {{todos | json}} -->
