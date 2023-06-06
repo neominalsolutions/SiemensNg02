@@ -1,0 +1,14 @@
+<div>
+
+  <label>Listeye Eklenecek</label>
+  <br>
+  <input [(ngModel)]="todo.title" type="text" />
+  <br>
+  <label>İşlem Tamam mı</label>
+  <input [(ngModel)]="todo.completed" type="checkbox" [value]="false">
+  <br>
+  <button (click)="Add()">Ekle</button>
+
+</div>
+
+{{todo | json}}
