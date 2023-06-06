@@ -21,5 +21,11 @@ export class TodoCreateComponent {
     console.log('todo', this.todo);
     // elimizdeki güncel nesneyi fırlattık.
     this.addClick.emit(this.todo);
+    this.reset();
+  }
+
+  reset() {
+    this.todo.completed = false;
+    this.todo.title = '';
   }
 }
